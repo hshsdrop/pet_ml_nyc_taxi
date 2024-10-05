@@ -1,0 +1,3 @@
+k_means:
+  n_clusters: 10
+  random_state: 2
