@@ -35,6 +35,6 @@ import pandas as pd
 
 df = get_data('train.csv')
 df = clean_data(df)
-
-model = train_kmeans(df)
+df = add_features(df, path_kmeans='models/kmeans.pkl')
 print(df.shape)
+print(df.head(2))
