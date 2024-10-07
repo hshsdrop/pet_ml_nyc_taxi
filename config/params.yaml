@@ -1,3 +1,8 @@
+data_split:
+  test_size: 0.2
+  test_split_seed: 64
+  valid_size: 0.2
+  valid_split_seed: 22
 k_means:
   n_clusters: 10
   random_state: 2

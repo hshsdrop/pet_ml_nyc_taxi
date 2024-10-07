@@ -20,8 +20,7 @@
 #     logging.info('Next Stage')
 #     # K-means fitting & saving
 #     start_time = time.time()
-#     logging.info(f'Fitting K-means. {datetime.utcfromtimestamp(start_time).strftime("%Y-%m-%d %H:%M:%S")}')
-#     model = train_kmeans(df)
+#     logging.info(f'Fitting K-means. {datetime.utcfromtimestamp(start_time).strftime("%Y-%m-%d %H:%M:%S")}') 
 #     pickle.dump(model, open('models/kmeans.pkl', 'wb'))
 #     end_time = time.time()
 #     execution_time = str(timedelta(seconds=(end_time - start_time))).split('.')[0]
@@ -35,6 +34,7 @@ import pandas as pd
 
 df = get_data('train.csv')
 df = clean_data(df)
+
 df = add_features(df, path_kmeans='models/kmeans.pkl')
 print(df.shape)
 print(df.head(2))
