@@ -1,3 +1,18 @@
+catboost:
+  boosting_type: Plain
+  bootstrap_type: Bernoulli
+  colsample_bylevel: 0.9576299713874448
+  depth: 13
+  iterations: 325
+  l2_leaf_reg: 5.850034036727785
+  learning_rate: 0.31836840775317227
+  max_bin: 922
+  max_ctr_complexity: 6
+  random_state: 20
+  subsample: 0.7838320694358547
+  task_type: "\u0421PU"
+  use_best_model: false
+  verbose: false
 data_split:
   test_size: 0.2
   test_split_seed: 64
