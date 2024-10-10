@@ -1,3 +1,7 @@
 __pycache__
 .venv
 cache
+backend/catboost_info
+test.py
+testing.ipynb
+route_info.json
