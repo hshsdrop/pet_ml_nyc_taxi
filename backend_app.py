@@ -1,4 +1,5 @@
 import pandas as pd
+import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel
 from backend.preprocessing import add_features
@@ -31,6 +32,9 @@ async def trip_duration(trip: TripConfigure):
     prediction = predict(trip_params)
     prediction = {'prediction': prediction}
     return prediction
+
+if __name__ == '__main__':
+    uvicorn.run(app)
     
 
 
