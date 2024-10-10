@@ -23,7 +23,7 @@ k_means:
   random_state: 2
 backend:
   url:
-    'http://fastapi_back:8000/predict'
+    'http://127.0.0.1:8000/predict'
 map:
   width:
     800

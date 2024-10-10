@@ -65,10 +65,10 @@ if st.sidebar.button('Predict Trip Duration!'):
     with col1:
         st.write("")
     with col2:
-        # ans = predict_trip_duration(url_backend, trip_params)
-        ans = 10000
-        # ans_text = f'The duration of your trip will be {int(ans["prediction"])} minutes!'
-        ans_text = f'The duration of your trip will be {int(ans)} minutes!'
+        ans = predict_trip_duration(url_backend, trip_params)
+        # ans = 10000
+        ans_text = f'The duration of your trip will be {int(ans["prediction"])} minutes!'
+        # ans_text = f'The duration of your trip will be {int(ans)} minutes!'
         with st.spinner('The route of the trip is being built ^_^  :oncoming_taxi:'):
                 
                 print(f'\nstart_trip_coords_frontend: {start_trip_coords}')

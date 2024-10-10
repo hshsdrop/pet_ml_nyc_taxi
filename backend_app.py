@@ -2,7 +2,7 @@ import pandas as pd
 from fastapi import FastAPI
 from pydantic import BaseModel
 from backend.preprocessing import add_features
-from models import predict
+from backend.models import predict
 
 
 app = FastAPI(title='NYC Manhattan Taxi Trip Duration',
@@ -20,10 +20,14 @@ class TripConfigure(BaseModel):
     passenger_count: int
 
 
+@app.get("/")
+def say_hello():
+    return "Hello!!!"
+
 @app.post('/predict')
 async def trip_duration(trip: TripConfigure):
     trip_params = pd.DataFrame({key: [value] for key, value in dict(trip).items()})
-    trip_params = add_features(trip_params, path_kmeans='model/kmeans.pkl', purpose='predict')
+    trip_params = add_features(trip_params, path_kmeans='backend/models/kmeans.pkl', purpose='predict')
     prediction = predict(trip_params)
     prediction = {'prediction': prediction}
     return prediction
