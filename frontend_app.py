@@ -53,11 +53,9 @@ trip_params = {'pickup_latitude': pickup_latitude,
                 
 start_trip_coords = (pickup_longitude, pickup_latitude)
 end_trip_coords = (dropoff_longitude, dropoff_latitude)
-print(f'\n\n Coords are: {start_trip_coords} and {end_trip_coords}.\n\n')
 
 # 3. Main Page Settings
 st. markdown("<h1 style='text-align: center; color: black;'>Manhattan Taxi Trip </h1>", unsafe_allow_html=True)
-# ox.config(log_console=True, use_cache=True)
 ox.settings.log_console=True
 ox.settings.use_cache=True
 if st.sidebar.button('Predict Trip Duration!'):
@@ -66,16 +64,10 @@ if st.sidebar.button('Predict Trip Duration!'):
         st.write("")
     with col2:
         ans = predict_trip_duration(url_backend, trip_params)
-        # ans = 10000
         ans_text = f'The duration of your trip will be {int(ans["prediction"])} minutes!'
-        # ans_text = f'The duration of your trip will be {int(ans)} minutes!'
         with st.spinner('The route of the trip is being built ^_^  :oncoming_taxi:'):
-                
-                print(f'\nstart_trip_coords_frontend: {start_trip_coords}')
-                print(f'end_trip_coords_frontend: {end_trip_coords}\n')
-
-                shortest_route = find_shortest_route(start_trip_coords, end_trip_coords)
-                st_data = folium_static(shortest_route, width=map_with, height=map_height)
+            shortest_route = find_shortest_route(start_trip_coords, end_trip_coords)
+            st_data = folium_static(shortest_route, width=map_with, height=map_height)
         st.success(ans_text)
     with col3:
         st.write("")
