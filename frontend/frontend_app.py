@@ -5,7 +5,7 @@ from PIL import Image
 from datetime import datetime
 from geopy.geocoders import Nominatim
 from streamlit_folium import folium_static
-from frontend.src import find_shortest_route, predict_trip_duration
+from src import find_shortest_route, predict_trip_duration
 from config import import_config
 
 st.set_page_config(layout="wide")
@@ -79,7 +79,7 @@ else:
         text = "Enter Trip Parameters: Left Panel"
         st. markdown(f"<h5 style='text-align: center; color: gray;'>{text} </h5> ", unsafe_allow_html=True)
         # Image
-        image = Image.open('frontend/src/ptr_manh.jpg')
+        image = Image.open('src/ptr_manh.jpg')
         st.image(image)
     with col3:
         st.write("")

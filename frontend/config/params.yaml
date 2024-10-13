@@ -1,0 +1,8 @@
+backend:
+  url:
+    'http://fastapi_back:8000/predict'
+map:
+  width:
+    800
+  height:
+    650

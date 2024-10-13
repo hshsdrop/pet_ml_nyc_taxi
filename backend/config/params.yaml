@@ -21,11 +21,3 @@ data_split:
 k_means:
   n_clusters: 10
   random_state: 2
-backend:
-  url:
-    'http://127.0.0.1:8000/predict'
-map:
-  width:
-    800
-  height:
-    650
