@@ -1,7 +1,7 @@
 backend:
   url:
-    # 'http://fastapi_back:8000/predict'
-    'https://main-bvxea6i-k4o37wg5i6vqs.de-2.platformsh.site/predict'
+    'http://fastapi_back:8000/predict' # для локального доступа
+    # 'https://main-bvxea6i-k4o37wg5i6vqs.de-2.platformsh.site/predict' # для доступа через интернет
 map:
   width:
     800
