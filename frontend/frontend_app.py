@@ -65,7 +65,7 @@ if st.sidebar.button('Predict Trip Duration!'):
     with col2:
         ans = predict_trip_duration(url_backend, trip_params)
         ans_text = f'The duration of your trip will be {int(ans["prediction"])} minutes!'
-        with st.spinner('The route of the trip is being built ^_^  :oncoming_taxi:'):
+        with st.spinner('The route of the trip is being built...'):
             shortest_route = find_shortest_route(start_trip_coords, end_trip_coords)
             st_data = folium_static(shortest_route, width=map_with, height=map_height)
         st.success(ans_text)
@@ -77,10 +77,10 @@ else:
         st.write("")
     with col2:
         text = "Enter Trip Parameters: Left Panel"
-        st. markdown(f"<h5 style='text-align: center; color: gray;'>{text} </h5> ", unsafe_allow_html=True)
+        st.markdown(f"<h5 style='text-align: center; color: gray;'>{text} </h5> ", unsafe_allow_html=True)
         # Image
         image = Image.open('src/ptr_manh.jpg')
-        st.image(image)
+        st.image(image, use_column_width=True)
     with col3:
         st.write("")
 
