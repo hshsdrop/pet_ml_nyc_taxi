@@ -1,4 +1,4 @@
-# [Предсказание времени и маршрута для такси в Манхэттене](https://front-ny-taxi.streamlit.app/)
+# [Manhattan Taxi Trip](https://front-ny-taxi.streamlit.app/)
 <img src = "https://raw.githubusercontent.com/hshsdrop/pet_ml_nyc_taxi/main/readme_img/example.png" width = "800"  align = "center" />
 
 Веб-приложение для предсказания продолжительности поездки на такси в Манхэттене и построения оптимального маршрута на карте.
